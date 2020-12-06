@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="002-di-xml" />
+        <module name="009-spring-trans-anno" />
+        <module name="006-aop-aspectj" />
+        <module name="007-spring-mybatis" />
+        <module name="008-spring-trans" />
+        <module name="010-spring-trans-aspectj" />
+        <module name="004-di-anno" />
+        <module name="011-spring-web" />
+        <module name="001-hello-spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="001-hello-spring" target="1.8" />
+      <module name="001-hello-spring (1)" target="1.8" />
+      <module name="002-di-xml" target="1.8" />
+      <module name="003-local-lib" target="1.8" />
+      <module name="004-di-anno" target="1.8" />
+      <module name="006-aop-aspectj" target="1.8" />
+      <module name="007-spring-mybatis" target="1.8" />
+      <module name="008-spring-trans" target="1.8" />
+      <module name="008-spring-trans-anno" target="1.8" />
+      <module name="009-spring-trans-anno" target="1.8" />
+      <module name="010-spring-trans-aspectj" target="1.8" />
+      <module name="011-spring-web" target="1.8" />
+      <module name="testlib" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

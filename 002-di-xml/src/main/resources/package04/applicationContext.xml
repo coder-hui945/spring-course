@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!--byName-->
+    <bean id="mystu" class="com.wuminghui.package04.Student" autowire="byName">
+        <property name="name" value="吴明辉"></property><!--spring会调用setName("吴明辉")--><!--先调用无参构造方法，之后才调用的set，get方法 -->
+        <property name="age" value="25"></property><!--spring会调用setAge(25)-->
+        <!--引用类型赋值方式一：(引用类型必须先声明对象)-->
+       <!-- <property name="school" ref="myschool"></property>&lt;!&ndash;setSchool(mySchool)&ndash;&gt;-->
+       <!--引用类型赋值方式二：引用类型的自动注入，自动注入只对于引用类型有效
+       使用的规则常用：byName   byType
+       1.byName：按名称注入，要求java类(含有该引用类型的Java类，应用类型是作为它的一个属性存在)中引用数据类型的属性名和spring容器（配置文件）<bean>的id名称一致。并且数据类型一致。
+            语法：<bean id = "xx" class = "yy" autowire = "byName">
+                        简单类型属性赋值
+                  </bean>
+       2.byType：安类型注入，java类中引用数据类型和spring容器中<bean>的class属性是同源关系的。
+               同源就是一类的意思：1.java类中引用类型的数据类型和bean的class的值是一样的
+                                    2.java类中引用类型的数据类型和bean的class的值是父子类关系的
+                                    3.java类中引用类型的数据类型和bean的class的值是接口和实现类关系
+       -->
+
+    </bean>
+    <bean id="school" class="com.wuminghui.package04.School">
+        <property name="name" value="西南交通大学"></property>
+        <property name="address" value="成都市"></property>
+    </bean>
+
+
+    <!-- di:给属性赋值
+      方式一：set注入
+                1.简单类型的set注入:spring调用属性名默认的set方法(一个property只能给一个属性赋值)
+                       <bean id = "xx"  class = "yy">
+                              <property name = "属性名1" value = "属性值1"></property>
+                              <property name = "属性名2" value = "属性值2"></property>
+                       </bean>
+                2.引用类型的set注入：spring调用属性名默认的set方法
+                        <bean id = "xx"  class = "yy">
+                              <property name = "属性名" ref = "bean的id"></property>
+
+                       </bean>
+
+    -->
+</beans>

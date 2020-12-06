@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--告诉spring创建对象:声明bean，就是告诉spring要创建某个类的对象
+                   一个bean标签只能声明一个对象。
+                id：对象的自定义名称，唯一值，代表该对象。spring通过这个名称找到对象。
+                class：类的全限定名称。（不能是接口，因为spring创建对象需要采用反射机制，必须使用类。）
+           声明完后，spring就会完成以下工作：(spring框架中有一个map，spring将创建好的对象放入map中存储起来)
+                someServiceImpl someservice = new someServiceImpl();
+                springMap.put(id,对象)；  例如:springMap("someService",new someServiceImp（）);
+                -->
+    <bean id="someService" class="com.wuminghui.service.impl.SomeServiceImpl"></bean>
+    <bean id="someService1" class="com.wuminghui.service.impl.SomeServiceImpl"></bean>
+    <bean id="mydate" class="java.util.Date"></bean>
+
+
+</beans>
+       <!-- spring的配置文件
+               1.beans：是根标签，spring把java对象称为bean。
+               2.spring-beans.xsd是约束文件，xsd后缀约束文件比dtd的约束更强。
+
+
+-->

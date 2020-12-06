@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+            <!--声明组件扫描器(component-scan),组件就是指java对象
+            base-package：指定注解所在项目中的包名（位置）
+            component-scan的工作原理：spring会去扫描遍历base-package指定的包和这个包的子包(包目录下的包)，
+            把这些包里面的所有类，按照这些类的注解的功能创建对象，或给属性赋值。
+
+            加入了component-scan标签，本页配置文件会变化：
+         1.系统自动加入一个新的约束文件：spring-context.xsd
+         2.系统自动给这个约束文件起个命名空间的名称xmlns:context代表"http://www.springframework.org/schema/context"
+            -->
+        <context:component-scan base-package="com.wuminghui.bao01"/>
+    <!--指定多个包的三种方式：-->
+    <!--第一种方式：使用多个组件扫描器标签，指定不同的包-->
+   <!-- <context:component-scan base-package="com.wuminghui.bao01"/>
+    <context:component-scan base-package="com.wuminghui.bao02"/>-->
+    <!--第二种方式：使用分隔符；或， 来分隔多个包名-->
+  <!--  <context:component-scan base-package="com.wuminghui.bao01;com.wuminghui.bao02"/>-->
+    <!--第三种方式：指定父包，里面的子包都会被扫描-->
+    <!--<context:component-scan base-package="com.wuminghui"/>-->
+</beans>

@@ -1,0 +1,8 @@
+004-di-anno:通过spring的注解来完成java对象的创建和赋值，替代xml文件
+
+实现步骤：
+1.加入spring-context依赖。
+2.创建类，在类中加入注解。
+3.创建spring的配置文件
+        声明组件扫描器的标签，指明注解在你项目中的位置。
+4.使用注解创建对象，创建容器ApplicationContext。

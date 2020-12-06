@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!--全部school类的声明-->
+    <bean id="school" class="com.wuminghui.package06.School">
+        <property name="name" value="西南交通大学"></property>
+        <property name="address" value="成都市"></property>
+    </bean>
+</beans>

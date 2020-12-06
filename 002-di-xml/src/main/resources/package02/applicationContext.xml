@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="mystu" class="com.wuminghui.package02.Student">
+        <property name="name" value="吴明辉"></property><!--spring会调用setName("吴明辉")--><!--先调用无参构造方法，之后才调用的set，get方法 -->
+        <property name="age" value="25"></property><!--spring会调用setAge(25)-->
+        <!--引用类型赋值(引用类型必须先声明对象)-->
+        <property name="school" ref="myschool"></property><!--setSchool(mySchool)-->
+        <!--注意：spring会根据name = "属性名"去默认找到该属性名的set方法（name => setName），只要定义了该set方法，不管类中有没有该属性，都会默认执行该set方法。而没有set方法就会报错，类中没有相应的属性不会报错。-->
+        <!--就算是value = "25"的值为int也要放在引号中，这是xml文件的规定：属性值必须放在引号里面。否则报错。-->
+    </bean>
+    <bean id="myschool" class="com.wuminghui.package02.School">
+        <property name="name" value="西南交通大学"></property>
+        <property name="address" value="成都市"></property>
+    </bean>
+
+
+    <!-- di:给属性赋值
+      方式一：set注入
+                1.简单类型的set注入:spring调用属性名默认的set方法(一个property只能给一个属性赋值)
+                       <bean id = "xx"  class = "yy">
+                              <property name = "属性名1" value = "属性值1"></property>
+                              <property name = "属性名2" value = "属性值2"></property>
+                       </bean>
+                2.引用类型的set注入：spring调用属性名默认的set方法
+                        <bean id = "xx"  class = "yy">
+                              <property name = "属性名" ref = "bean的id"></property>
+
+                       </bean>
+
+    -->
+</beans>

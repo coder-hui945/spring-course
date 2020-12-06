@@ -1,0 +1,26 @@
+009-spring-trans-anno:做事务的环境项目
+******************添加事务处理（spring框架自己提供的注解方式实现）************************
+
+实现步骤：
+1.创建maven项目
+2.加入依赖
+        1.spring的依赖
+        2.mybatis依赖
+        3.mysql驱动
+        4.spring的事务依赖
+        5.mybatis和spring集成的依赖：mybatis官方提供的，用来在spring项目中创建mybatis的sqlSessionFactory
+            ，dao对象的。
+3.创建实体类
+        1.goods
+        2.sale
+4.创建dao接口和mapper文件
+        1.SaleDao接口  SaleDao.xml
+        2.GoodsDao接口  GoodsDao.xml
+5.创建mybatis主配置文件
+6.创建Service接口和实现类，属性是SaleDao  GoodsDao。
+7.创建spring的配置文件：声明mybatis对象，交给spring创建和管理
+        1.数据源
+        2.SqlSessionFactory
+        3.dao对象
+        4.声明自定义的Service
+8.创建一个测试类，获取Service对象，通过Service调用dao完成数据库的访问。

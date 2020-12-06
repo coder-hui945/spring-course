@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+   <!--设置别名-->
+    <typeAliases>
+        <!--name:实体类所在包名-->
+        <package name="com.wuminghui.domain"/>
+    </typeAliases>
+    <!--sql mapper：sql映射文件的位置-->
+    <mappers>
+        <package name="com.wuminghui.dao"></package>
+    </mappers>
+</configuration>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--全部学生类声明-->
+    <bean id="mystu" class="com.wuminghui.package06.Student" autowire="byName">
+        <property name="name" value="吴明辉"></property><!--spring会调用setName("吴明辉")--><!--先调用无参构造方法，之后才调用的set，get方法 -->
+        <property name="age" value="25"></property><!--spring会调用setAge(25)-->
+
+    </bean>
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/011-spring-web" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/001-hello-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/002-xml-value/pom.xml" />
+        <option value="$PROJECT_DIR$/002-xml-value/pom.xml.bak" />
+        <option value="$PROJECT_DIR$/002-di-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/004-di-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/006-aop-aspectj/pom.xml" />
+        <option value="$PROJECT_DIR$/007-spring-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/008-spring-trans/pom.xml" />
+        <option value="$PROJECT_DIR$/009-spring-trans - anno/pom.xml" />
+        <option value="$PROJECT_DIR$/009-spring-trans-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/010-spring-trans-aspectj/pom.xml" />
+        <option value="$PROJECT_DIR$/011-spring-web/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

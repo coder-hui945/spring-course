@@ -1,6 +1,7 @@
 # spring-course
 Spring-course学习笔记
 
+
 spring的第一个核心功能 ioc
 
 IoC (Inversion of Control) : 控制反转， 是一个理论，概念，思想。
@@ -32,7 +33,7 @@ java中创建对象有哪些方式：
 ioc的体现： 
    servlet  1： 创建类继承HttpServelt 
 	         2:  在web.xml 注册servlet ， 使用<servlet-name> myservlet </servlet-name>
-				                                 <servelt-class>com.bjpwernode.controller.MyServlet1</servlet-class>
+				                                 <servelt-class>com.wuminghui.controller.MyServlet1</servlet-class>
 
             3. 没有创建 Servlet对象， 没有 MyServlet myservlet = new MyServlet()
 
@@ -481,9 +482,3 @@ web项目中容器对象只需要创建一次，  把容器对象放入到全局
 	 value：this.context
 
 	 servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, this.context);
-
-
-	 作业要求：
-	  1. 使用ajax请求方式：获取服务器端定义的 还款方式， 获取最长的还款期数
-	  2. 点击保存，把计算结果，保存到数据库，使用mybatis
-     3. 整个项目使用 servlet ，spring + mybatis

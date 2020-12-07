@@ -1,4 +1,5 @@
 package com.wuminghui;
+import com.wuminghui.bao05.SomeService;
 import com.wuminghui.bao05.SomeServiceImpl;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,7 +14,7 @@ public class myTest05 {
     public void test01(){
         String config = "applicationContext.xml";
         ClassPathXmlApplicationContext ao = new ClassPathXmlApplicationContext(config);
-        SomeServiceImpl bean = (SomeServiceImpl) ao.getBean("someService");
+        SomeService bean = (SomeService) ao.getBean("someService");
         bean.doOther("吴明辉",25);
         System.out.println("动态代理方式：" + bean.getClass().getName());
 

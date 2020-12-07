@@ -24,7 +24,7 @@ public class myTest {
         ClassPathXmlApplicationContext co = new ClassPathXmlApplicationContext(config);
        //获取spring容器中的dao对象
         StudentDao dao = (StudentDao) co.getBean("studentDao");
-        Student student = new Student(1234,"terminator",1001);
+        Student student = new Student(1235,"terminator",1001);
         int nums = dao.insertStudent(student);
         System.out.println("nums===" + nums);
 

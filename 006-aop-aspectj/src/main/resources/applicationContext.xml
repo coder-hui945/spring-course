@@ -17,10 +17,9 @@
         -->
     <!--aspectj-autoproxy会把spring中所有的目标对象(含有@Aspect注解的切面对象中所指定的所有普通对象)一次性都生成代理对象。-->
 
-    <aop:aspectj-autoproxy/><!--该句是使用系统默认的动态代理方式-->
+    <!--<aop:aspectj-autoproxy/>&lt;!&ndash;该句是使用系统默认的动态代理方式&ndash;&gt;-->
     <!--如果有接口，还想不让系统默认用JDK动态代理处理，自定义配置CGlib动态代理来处理-->
     <!--proxy-target-class="true":告诉框架，要使用CGlib动态代理-->
-    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
-
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
 </beans>

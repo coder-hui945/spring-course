@@ -31,12 +31,16 @@ public class RegisterServlet extends HttpServlet {
         //给一个页面，显示结果
         System.out.println("++++++++++++++++");
         request.getRequestDispatcher("/result.jsp").forward(request,response);
-
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-
+        try {
+            doPost(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

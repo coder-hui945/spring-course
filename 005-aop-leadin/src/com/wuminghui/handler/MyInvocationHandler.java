@@ -22,7 +22,7 @@ public class MyInvocationHandler implements InvocationHandler {
             String methodName = method.getName();
         if ("doSome".equals(methodName)){
             serviceTools.doLog();
-            //执行目标类的额方法，通过Method类实现
+            //执行目标类的方法，通过Method类实现
             res = method.invoke(target, args);//someServiceImpl.doSome   doOther
             //目标方法的执行结果
             serviceTools.doTrans();

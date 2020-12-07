@@ -11,6 +11,6 @@ public class myTest {
         String config = "applicationContext.xml";
         ClassPathXmlApplicationContext co = new ClassPathXmlApplicationContext(config);
         BuyGoodsService service = (BuyGoodsService) co.getBean("buyService");
-        service.buy(1001,10);
+        service.buy(1001,20);
     }
 }

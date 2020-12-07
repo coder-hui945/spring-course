@@ -12,6 +12,6 @@ public class myTest {
         ClassPathXmlApplicationContext co = new ClassPathXmlApplicationContext(config);
         BuyGoodsService service = (BuyGoodsService) co.getBean("buyService");
         System.out.println("service代理:" + service.getClass().getName());
-        service.buy(1002,1);
+        service.buy(1002,20);
     }
 }

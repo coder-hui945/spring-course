@@ -13,7 +13,7 @@ public class Student {
     @Value(value = "${age}")
     private int age;
 
-   @Resource
+    @Resource
     private School school;
 
     @Override

@@ -55,7 +55,7 @@
             id:自定义名称，表示<tx:advice></tx:advice>标签中间的配置内容
             transaction-manager：事务管理器对象的id
         -->
-    <tx:advice id="myAdvice" transaction-manager="transactionManager">
+    <tx:advice id="myAdvice" transaction-manager="transactionManager"><!--配置事务通知(切面)-->
         <!--tx:attributes:表示配置事务属性-->
         <tx:attributes>
             <!--<tx:method>标签可以有多个，分别给不同的方法配置事务属性属性

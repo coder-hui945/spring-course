@@ -1,7 +1,7 @@
 package com.wuminghui.bao05;
 
 //目标类
-public class SomeServiceImpl  {
+public class SomeServiceImpl implements SomeService  {
 
     public void doSome(String name,int age) {
         //给doSome方法增加功能，在方法执行之前输出执行的时间。

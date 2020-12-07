@@ -49,6 +49,7 @@ public class myAspect {
             if ("吴明辉".equals(name)){
                 //1.目标方法调用
                 res = pjp.proceed();//执行目标方法，相当于Method.invoke()
+                res = "888";
             }else{
                 System.out.println("没有调用目标方法");
                 res = "777";

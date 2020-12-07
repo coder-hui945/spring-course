@@ -6,7 +6,7 @@
 </head>
 <body>
     <p>注册学生</p>
-    <form action="reg" method="post">
+    <form action="reg" method="get">
         <table>
             <tr>
                 <td>id</td>
